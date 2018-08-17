@@ -38,37 +38,71 @@ q1 c q1
 ### Output:
 ```
 (declare-const r_a Int)
-(declare-const r_q1q1 Int)
+(declare-const x_qo_a_q1 Int)
 (declare-const r_b Int)
+(declare-const x_q1_b_q1 Int)
+(declare-const r_c Int)
+(declare-const x_q1_c_q1 Int)
 (declare-const out_q0 Int)
-(declare-const out_q1q0q1a Int)
+(declare-const out_q1 Int)
 (declare-const in_q0 Int)
-(declare-const in_q1q0q1a Int)
+(declare-const in_q1 Int)
 (declare-const start_q0 Bool)
-(declare-const start_q1q0q1a Bool)
+(declare-const start_q1 Bool)
 (declare-const t_q0 Int)
-(declare-const t_q1q0q1a Int)
-(declare-const t_cqo Int)
+(declare-const t_q1 Int)
 (declare-const flag_q0_1 Bool)
 (declare-const flag_q0_2 Bool)
 (declare-const flag_q0_3 Bool)
-(declare-const flag_q1q0q1a_1 Bool)
-(declare-const flag_q1q0q1a_2 Bool)
-(declare-const flag_q1q0q1a_3 Bool)
+(declare-const flag_q1_1 Bool)
+(declare-const flag_q1_2 Bool)
+(declare-const flag_q1_3 Bool)
 (assert (>= r_a 0))
-(assert (>= r_q1q1 0))
+(assert (>= x_qo_a_q1 0))
 (assert (>= r_b 0))
+(assert (>= x_q1_b_q1 0))
+(assert (>= r_c 0))
+(assert (>= x_q1_c_q1 0))
 (assert (>= out_q0 0))
-(assert (>= out_q1q0q1a 0))
+(assert (>= out_q1 0))
 (assert (>= in_q0 0))
-(assert (>= in_q1q0q1a 0))
+(assert (>= in_q1 0))
 (assert (>= t_q0 0))
 (assert (<= t_q0 1))
-(assert (>= t_q1q0q1a 0))
-(assert (<= t_q1q0q1a 1))
-(assert (>= t_cqo 0))
-(assert (<= t_cqo 1))
-(assert (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (= r_a 0 )(= r_q1q1 0 ))(= r_b 0 ))(= out_q0 0 ))(= out_q1q0q1a 0 ))(= in_q0 0 ))(= in_q1q0q1a 0 ))(not  start_q0 ))(not  start_q1q0q1a ))(= t_q0 0 ))(= t_q1q0q1a 0 ))(= 1 t_cqo ))(or (or flag_q0_1 flag_q0_2 )flag_q0_3 ))(= flag_q0_1 (and (and (not start_q0  )(= t_q0 1 ))(= in_q0 (+ out_q0 1 )))))(= flag_q0_2 (and (and start_q0 (= t_q0 0 ))(= in_q0 (- out_q0 1 )))))(= flag_q0_3 (and (= in_q0 out_q0 )(not (xor start_q0 (= t_q0 1 )) ))))(or (or flag_q1q0q1a_1 flag_q1q0q1a_2 )flag_q1q0q1a_3 ))(= flag_q1q0q1a_1 (and (and (not start_q1q0q1a  )(= t_q1q0q1a 1 ))(= in_q1q0q1a (+ out_q1q0q1a 1 )))))(= flag_q1q0q1a_2 (and (and start_q1q0q1a (= t_q1q0q1a 0 ))(= in_q1q0q1a (- out_q1q0q1a 1 )))))(= flag_q1q0q1a_3 (and (= in_q1q0q1a out_q1q0q1a )(not (xor start_q1q0q1a (= t_q1q0q1a 1 )) )))))
+(assert (>= t_q1 0))
+(assert (<= t_q1 1))
+(assert (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (= r_a x_qo_a_q1 )(= r_b x_q1_b_q1 ))(= r_c x_q1_c_q1 ))(= out_q0 0 ))(= out_q1 (+ x_q1_b_q1 x_q1_c_q1 )))(= in_q0 0 ))(= in_q1 (+ x_qo_a_q1 (+ x_q1_b_q1 x_q1_c_q1 ))))start_q0 )(not  start_q1 ))(= t_q0 0 ))(= 1 t_q1 ))(or (or flag_q0_1 flag_q0_2 )flag_q0_3 ))(= flag_q0_1 (and (and (not start_q0  )(= t_q0 1 ))(= in_q0 (+ out_q0 1 )))))(= flag_q0_2 (and (and start_q0 (= t_q0 0 ))(= in_q0 (- out_q0 1 )))))(= flag_q0_3 (and (= in_q0 out_q0 )(not (xor start_q0 (= t_q0 1 )) ))))(or (or flag_q1_1 flag_q1_2 )flag_q1_3 ))(= flag_q1_1 (and (and (not start_q1  )(= t_q1 1 ))(= in_q1 (+ out_q1 1 )))))(= flag_q1_2 (and (and start_q1 (= t_q1 0 ))(= in_q1 (- out_q1 1 )))))(= flag_q1_3 (and (= in_q1 out_q1 )(not (xor start_q1 (= t_q1 1 )) )))))
 (check-sat)
 (get-model)
 ```
+
+## Variables description
+#### x_q0_a_q1 :
+the number of times q0 traversed to q1 reading "a"<br>
+
+#### in_q0 :
+the total number of times other states traversed to q0<br>
+
+#### out_q0 :
+the total number of times q0 traversed to other states<br>
+
+#### start_q0 :
+whether q0 is the initial state<br>
+
+#### start_q0 :
+whether q0 is an accept state<br>
+
+#### t_q0 :
+whether q0 is the terminal state<br>
+
+#### r_a :
+the total number of times "a" is read<br>
+
+#### flag_q0_1
+q0 is the initial state<br>
+
+#### flag_q0_2
+q0 is the terminal state<br>
+
+#### flag_q0_3
+q0 is an intermediate state or both initial and terminal state<br>
