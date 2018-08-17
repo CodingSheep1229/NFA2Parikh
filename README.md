@@ -1,5 +1,8 @@
 # NFA2Parikh
-Convert Non Deterministic Automata to Parikh Images in z3 format
+Convert Nondeterministic Finite Automaton to Parikh Images in z3 format
+<br>
+this method is based on
+> Helmut Seidl, Thomas Schwentick, Anca Muscholl, Peter Habermehl. Counting in trees for free. Josep Díaz, Juhani Karhumäki, Arto Lepistö and Donald Sannella. 31st International Colloquium on Automata, Languages and Programming (ICALP’04), 2004, Turku, Finland. Springer Verlag, pp.1136-1149, 2004, 3142. <hal-00159525>
 
 click [here](https://github.com/Z3Prover/z3) for z3
 
