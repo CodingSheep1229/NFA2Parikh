@@ -20,7 +20,7 @@ transitions1(p,a,q)
 .
 .
 .
-### Example: $$a(b|c)^*$$
+### Example: a(b|c)*
 ![NFA](https://i.imgur.com/iSZEUZj.png)
 ```
 2 1 3 3
