@@ -14,11 +14,4 @@ q5 a q4
 q4 b q6
 q6 b q4
 
-
-# Regex: (aa|bb)*cc(aa|bb)*
-# state_num, terminal_num, alphabet_num, transition_num
-# states
-# initial state
-# terminal states
-# alphabets
-# transitions(p,a,q)
+# RegEx: (aa|bb)*cc(aa|bb)*
