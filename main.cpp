@@ -19,8 +19,10 @@ int main(int argc,char* argv[])
     while(getline(file, inputStr))
     {
         str += inputStr;
+        str += "\n";
     }
     file.close();
+    //cout << str;
 
 
     NFA nfa(str);
