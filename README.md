@@ -16,7 +16,7 @@ initial state<br>
 terminal states<br>
 alphabets<br>
 transitions1(p,a,q)<br>
-transitions1(p,a,q)<br>
+transitions2(p,a,q)<br>
 .<br>
 .<br>
 .<br>
