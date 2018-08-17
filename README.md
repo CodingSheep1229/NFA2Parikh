@@ -10,16 +10,16 @@ $ bin/NFA2Parikh NFA.nfa
 ```
 
 ## Input Format:
-state_num, terminal_num, alphabet_num, transition_num
-states
-initial state
-terminal states
-alphabets
-transitions1(p,a,q)
-transitions1(p,a,q)
-.
-.
-.
+state_num, terminal_num, alphabet_num, transition_num<br>
+states<br>
+initial state<br>
+terminal states<br>
+alphabets<br>
+transitions1(p,a,q)<br>
+transitions1(p,a,q)<br>
+.<br>
+.<br>
+.<br>
 ### Example: a(b|c)*
 ![NFA](https://i.imgur.com/iSZEUZj.png)
 ```
