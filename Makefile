@@ -1,5 +1,5 @@
 #declare variables
-CXX = g++
+# CXX = g++
 INCLUDE = .
 FLAGS = -O3 -g -Wall -ansi
 
