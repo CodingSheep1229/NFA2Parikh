@@ -22,8 +22,6 @@ int main(int argc,char* argv[])
         str += "\n";
     }
     file.close();
-    //cout << str;
-
 
     NFA nfa(str);
 
