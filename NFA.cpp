@@ -104,7 +104,6 @@ NFA::ParikhImage()
 			v.push_back("+");
 		}
 		v.push_back("=");
-
 		v.push_back("and");
 	}
 
@@ -180,7 +179,6 @@ NFA::ParikhImage()
 		v.push_back("flag_"+Q[i]+"_3");
 		v.push_back("or");
 		v.push_back("and");
-
 		v.push_back("flag_"+Q[i]+"_1");
 		v.push_back("start_"+Q[i]);
 		v.push_back("");
@@ -197,7 +195,6 @@ NFA::ParikhImage()
 		v.push_back("and");
 		v.push_back("=");
 		v.push_back("and");
-
 		v.push_back("flag_"+Q[i]+"_2");
 		v.push_back("start_"+Q[i]);
 		v.push_back("t_"+Q[i]);
@@ -212,7 +209,6 @@ NFA::ParikhImage()
 		v.push_back("and");
 		v.push_back("=");
 		v.push_back("and");
-
 		v.push_back("flag_"+Q[i]+"_3");
 		v.push_back("in_"+Q[i]);
 		v.push_back("out_"+Q[i]);
@@ -228,12 +224,9 @@ NFA::ParikhImage()
 		v.push_back("=");
 		v.push_back("and");
 	}
-
 	ExpTree tree(v);
 	string ans = tree.z3();
-
 	ans += "(check-sat)\n";
 	ans += "(get-model)\n";
-
 	return ans;
 }
