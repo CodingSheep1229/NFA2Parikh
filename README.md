@@ -8,8 +8,9 @@ click [here](https://github.com/Z3Prover/z3) for z3
 
 ## Usage
 ```
+$ cd src
 $ make
-$ bin/NFA2Parikh NFA.nfa
+$ ../bin/NFA2Parikh NFA.nfa
 ```
 
 ## Input Format:
