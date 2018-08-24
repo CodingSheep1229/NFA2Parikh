@@ -39,7 +39,7 @@ q1 c q1
 ### Output:
 ```
 (declare-const r_a Int)
-(declare-const x_qo_a_q1 Int)
+(declare-const x_q0_a_q1 Int)
 (declare-const r_b Int)
 (declare-const x_q1_b_q1 Int)
 (declare-const r_c Int)
@@ -59,7 +59,7 @@ q1 c q1
 (declare-const flag_q1_2 Bool)
 (declare-const flag_q1_3 Bool)
 (assert (>= r_a 0))
-(assert (>= x_qo_a_q1 0))
+(assert (>= x_q0_a_q1 0))
 (assert (>= r_b 0))
 (assert (>= x_q1_b_q1 0))
 (assert (>= r_c 0))
@@ -72,7 +72,7 @@ q1 c q1
 (assert (<= t_q0 1))
 (assert (>= t_q1 0))
 (assert (<= t_q1 1))
-(assert (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (= r_a x_qo_a_q1 )(= r_b x_q1_b_q1 ))(= r_c x_q1_c_q1 ))(= out_q0 0 ))(= out_q1 (+ x_q1_b_q1 x_q1_c_q1 )))(= in_q0 0 ))(= in_q1 (+ x_qo_a_q1 (+ x_q1_b_q1 x_q1_c_q1 ))))start_q0 )(not  start_q1 ))(= t_q0 0 ))(= 1 t_q1 ))(or (or flag_q0_1 flag_q0_2 )flag_q0_3 ))(= flag_q0_1 (and (and (not start_q0  )(= t_q0 1 ))(= in_q0 (+ out_q0 1 )))))(= flag_q0_2 (and (and start_q0 (= t_q0 0 ))(= in_q0 (- out_q0 1 )))))(= flag_q0_3 (and (= in_q0 out_q0 )(not (xor start_q0 (= t_q0 1 )) ))))(or (or flag_q1_1 flag_q1_2 )flag_q1_3 ))(= flag_q1_1 (and (and (not start_q1  )(= t_q1 1 ))(= in_q1 (+ out_q1 1 )))))(= flag_q1_2 (and (and start_q1 (= t_q1 0 ))(= in_q1 (- out_q1 1 )))))(= flag_q1_3 (and (= in_q1 out_q1 )(not (xor start_q1 (= t_q1 1 )) )))))
+(assert (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (= r_a x_q0_a_q1 )(= r_b x_q1_b_q1 ))(= r_c x_q1_c_q1 ))(= out_q0 x_q0_a_q1 ))(= out_q1 (+ x_q1_b_q1 x_q1_c_q1 )))(= in_q0 0 ))(= in_q1 (+ x_q0_a_q1 (+ x_q1_b_q1 x_q1_c_q1 ))))start_q0 )(not  start_q1 ))(= t_q0 0 ))(= 1 t_q1 ))(or (or flag_q0_1 flag_q0_2 )flag_q0_3 ))(= flag_q0_1 (and (and (not start_q0  )(= t_q0 1 ))(= in_q0 (+ out_q0 1 )))))(= flag_q0_2 (and (and start_q0 (= t_q0 0 ))(= in_q0 (- out_q0 1 )))))(= flag_q0_3 (and (= in_q0 out_q0 )(not (xor start_q0 (= t_q0 1 )) ))))(or (or flag_q1_1 flag_q1_2 )flag_q1_3 ))(= flag_q1_1 (and (and (not start_q1  )(= t_q1 1 ))(= in_q1 (+ out_q1 1 )))))(= flag_q1_2 (and (and start_q1 (= t_q1 0 ))(= in_q1 (- out_q1 1 )))))(= flag_q1_3 (and (= in_q1 out_q1 )(not (xor start_q1 (= t_q1 1 )) )))))
 (check-sat)
 (get-model)
 ```
