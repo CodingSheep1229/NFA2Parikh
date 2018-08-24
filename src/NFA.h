@@ -25,6 +25,13 @@ public:
 	string ParikhImage();
 
 private:
+	void setX(vector<string>& v);
+	void setOut(vector<string>& v);
+	void setIn(vector<string>& v);
+	void setStart(vector<string>& v);
+	void setT(vector<string>& v);
+	void setFlag(vector<string>& v);
+
 	vector<string> Q;
 	vector<string> sigma;
 	string q0;

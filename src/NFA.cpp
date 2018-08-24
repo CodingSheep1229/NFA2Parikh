@@ -57,10 +57,9 @@ NFA::NFA(string raw)
 	}
 }
 
-string
-NFA::ParikhImage()
+void
+NFA::setX(vector<string>& v)
 {
-	vector<string> v;
 	for (size_t i=0;i<sigma.size();i++)
 	{
 		int cnt = 0;
@@ -84,7 +83,11 @@ NFA::ParikhImage()
 		if (i != 0)
 			v.push_back("and");
 	}
+}
 
+void
+NFA::setOut(vector<string>& v)
+{
 	for (size_t i=0;i<Q.size();i++)
 	{
 		int cnt = 0;
@@ -106,7 +109,11 @@ NFA::ParikhImage()
 		v.push_back("=");
 		v.push_back("and");
 	}
+}
 
+void
+NFA::setIn(vector<string>& v)
+{
 	for (size_t i=0;i<Q.size();i++)
 	{
 		int cnt = 0;
@@ -129,6 +136,11 @@ NFA::ParikhImage()
 
 		v.push_back("and");
 	}
+}
+
+void
+NFA::setStart(vector<string>& v)
+{
 	for (size_t i=0;i<Q.size();i++)
 	{
 		if (Q[i] == q0)
@@ -145,7 +157,11 @@ NFA::ParikhImage()
 			v.push_back("and");
 		}	
 	}
+}
 
+void
+NFA::setT(vector<string>& v)
+{
 	for (size_t i=0;i<Q.size();i++)
 	{
 		if (!in(T,Q[i]))
@@ -170,7 +186,11 @@ NFA::ParikhImage()
 	}
 	v.push_back("=");
 	v.push_back("and");
+}
 
+void
+NFA::setFlag(vector<string>& v)
+{
 	for (size_t i=0;i<Q.size();i++)
 	{
 		v.push_back("flag_"+Q[i]+"_1");
@@ -224,6 +244,19 @@ NFA::ParikhImage()
 		v.push_back("=");
 		v.push_back("and");
 	}
+}
+
+string
+NFA::ParikhImage()
+{
+	vector<string> v;
+	setX(v);
+	setOut(v);
+	setIn(v);
+	setStart(v);
+	setT(v);
+	setFlag(v);
+
 	ExpTree tree(v);
 	string ans = tree.z3();
 	ans += "(check-sat)\n";
