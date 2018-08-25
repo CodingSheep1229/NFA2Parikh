@@ -17,6 +17,16 @@ bool in(vector<string> v,string s)
 	return false;
 }
 
+void print(vector<string> v)
+{
+    cout << "[";
+    for (size_t i=0;i<v.size()-1;i++)
+    {
+        cout << v[i] << ", ";
+    }
+    cout << v[v.size()-1] << "]\n";
+}
+
 NFA::NFA(string raw)
 {
 	int n1,n2,n3,n4;
