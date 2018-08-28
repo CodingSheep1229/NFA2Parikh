@@ -1,5 +1,5 @@
 # NFA2Parikh
-[![Build Status](https://travis-ci.org/CodingSheep1229/travis-gtest-cmake-example.svg?branch=master)]
+
 Convert Nondeterministic Finite Automaton to Parikh Images in z3 format
 <br>
 this method is based on
