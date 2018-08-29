@@ -17,4 +17,4 @@ ExpTree.o:
 	$(CXX) -I$(INCLUDE) $(FLAGS) -c src/ExpTree.cpp 
 
 clean:
-	rm -f =bin/*
+	rm -f bin/*
